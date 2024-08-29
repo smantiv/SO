@@ -7,59 +7,70 @@ Tema: Ejercicio funciones mátematicas
 
 #include <stdio.h>
 #include <math.h>
-#include "funciones.h"
 
 #define PI 3.14159265358979323846
 
-void suma(){
-  /* Calcular suma */
-  int a,b;
-  printf("Ingrese el primer numero\n");
-  scanf("%d",&a);
-  printf("Ingrese el segundo numero\n");
-  scanf("%d",&b);
-  int suma = a + b;
-  printf("La suma del numero %d y el numero %d es %d \n", a, b, suma);
+// Función para calcular la suma de dos números
+int suma() {
+    int a, b;
+    printf("Ingrese el primer numero: ");
+    scanf("%d", &a);
+    printf("Ingrese el segundo numero: ");
+    scanf("%d", &b);
+    int resultado = a + b;
+    printf("La suma del numero %d y el numero %d es %d \n", a, b, resultado);
+    return resultado; // Opcionalmente, puedes devolver el resultado de la suma
 }
 
-void areaCirculo() {
-  /* Calcular el área de un círculo ingresando el radio por teclado */
-  float r;
-  printf("Ingrese el valor del radio: ");
-  scanf("%f", &r); 
-  float area = PI * (r * r);  
-  printf("El área de un círculo con radio %f es %f\n", r, area);
+// Función para calcular el área de un círculo
+float areaCirculo() {
+    float radio;
+    printf("Ingrese el valor del radio: ");
+    scanf("%f", &radio);
+    float area = PI * radio * radio;
+    printf("El área de un círculo con radio %.2f es %.2f\n", radio, area);
+    return area; // Opcionalmente, puedes devolver el área calculada
 }
 
-void vol(){
-  /* Calcular el volumen de circunferencia ingresando el radio por teclado */
-  float r2;
-  printf("Ingrese el valor del radio\n");
-  scanf("%f",&r2);
-  double vol = 4/3.0 * PI * (r2*r2*r2);
-  printf("El volumen de una circunferencia con radio %f es %f \n", r2,vol);
+// Función para calcular el volumen de una esfera (no de una circunferencia)
+double volumenEsfera() {
+    float radio;
+    printf("Ingrese el valor del radio: ");
+    scanf("%f", &radio);
+    double volumen = (4.0 / 3.0) * PI * pow(radio, 3); 
+    printf("El volumen de una esfera con radio %.2f es %.2f \n", radio, volumen);
+    return volumen; // Opcionalmente, puedes devolver el volumen calculado
 }
 
-void volC(){
-  /* Calcular el volumen de un cono ingresando variables necesarias por teclado */
-  float r3;
-  float h;
-  printf("Ingrese el valor del radio\n");
-  scanf("%f",&r3);
-  printf("Ingrese el valor de la altura\n");
-  scanf("%f",&h);
-  double volC = 1/3.0 * PI * (r3*r3) * h;
-  printf("El volumen de una circunferencia con radio %f y altura %f es %f \n", r3, h, volC);
+// Función para calcular el volumen de un cono
+double volumenCono() {
+    float radio, altura;
+    printf("Ingrese el valor del radio: ");
+    scanf("%f", &radio);
+    printf("Ingrese el valor de la altura: ");
+    scanf("%f", &altura);
+    double volumen = (1.0 / 3.0) * PI * radio * radio * altura;
+    printf("El volumen de un cono con radio %.2f y altura %.2f es %.2f \n", radio, altura, volumen);
+    return volumen; // Opcionalmente, puedes devolver el volumen calculado
 }
 
-void hipo(){
-  /* Calcular una hipotenusa ingresando variables necesarias por teclado */
-  float catO;
-  float catC;
-  printf("Ingrese la medida del cateto 1\n");
-  scanf("%f",&catO);
-  printf("Ingrese el valor del cateto 2\n");
-  scanf("%f",&catC);
-  double tan = sqrt((catO*catO)+(catC*catC));
-  printf("El valor de la hipotenusa de un triángulo, cuyo cateto opuesto es %f y cateto contiguo es %f, es %f \n", catO, catC, tan);
+// Función para calcular la hipotenusa de un triángulo rectángulo
+double hipotenusa() {
+    float cateto1, cateto2;
+    printf("Ingrese la medida del cateto 1: ");
+    scanf("%f", &cateto1);
+    printf("Ingrese la medida del cateto 2: ");
+    scanf("%f", &cateto2);
+    double hipotenusa = sqrt(cateto1 * cateto1 + cateto2 * cateto2);
+    printf("El valor de la hipotenusa de un triángulo, cuyos catetos son %.2f y %.2f, es %.2f \n", cateto1, cateto2, hipotenusa);
+    return hipotenusa; // Opcionalmente, puedes devolver la hipotenusa calculada
+}
+
+int main() {
+    suma();
+    areaCirculo();
+    volumenEsfera(); 
+    volumenCono();
+    hipotenusa();
+    return 0;
 }
