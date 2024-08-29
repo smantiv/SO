@@ -1,4 +1,4 @@
-/********************************************************
+/* °❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*
 Autor: S. Mantilla
 Materia: Sistemas Operativos
 Fecha: 18-07-2024
@@ -6,10 +6,9 @@ Tema: Introduccion al lenguaje C y los entornos
   -Entornos en la web (CLOUD/NUBE)
   -Comandos principales de Linux
   -Programa 0: hola mundo
-********************************************************/
+°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔* */
 
 #include <stdio.h>
-
 int main(int argc, char *argv[]){
   printf("\033[1;35m");
   printf("°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*°❀⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･\n");
