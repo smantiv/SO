@@ -1,7 +1,7 @@
 /********************************************************
 Autor: Sofia Mantilla
 Materia: Sistemas Operativos
-Fecha: 10-10-2024
+Fecha: 17-10-2024
 Descripción: ParcialII - Este programa implementa la lectura de 
 arreglos desde archivos y la suma de sus elementos utilizando 
 comunicación entre procesos a través de pipes y fork().
