@@ -1,7 +1,7 @@
 /********************************************************
 Autor: Sofia Mantilla
 Materia: Sistemas Operativos
-Fecha: 10-10-2024
+Fecha: 17-10-2024
 Descripción: Implementación de funciones para la lectura 
              de arreglos y suma de enteros.
 ********************************************************/
