@@ -1,7 +1,7 @@
 /********************************************************
 Autor: Sofia Mantilla
 Materia: Sistemas Operativos
-Fecha: 10-10-2024
+Fecha: 17-10-2024
 Descripción: Header para TallerProcesosFunciones.c.
              Contiene la declaración de las funciones 
              para leer arreglos y sumar enteros.
