@@ -62,7 +62,7 @@ int main(int argc, char* argv[]) {
 
     if (pid1 == 0) {
         //código del gran hijo
-        close(pipe1[0]);  // Cerrar el extremo de lectura del pipe1
+        close(pipe1[0]);  //cerrar el extremo de lectura del pipe1
         int sumaA = suma_arreglo(arreglo1, N1);
         printf("GranHijo: [%d] Sum_File1 = %d\n", getpid(), sumaA);
         write(pipe1[1], &sumaA, sizeof(sumaA));  //enviar la suma a través del pipe1
@@ -104,9 +104,9 @@ int main(int argc, char* argv[]) {
 
     if (pid3 == 0) {
         //código del primer hijo
-        close(pipe1[1]);  // Cerrar el extremo de escritura del pipe1
-        close(pipe2[1]);  // Cerrar el extremo de escritura del pipe2
-        close(pipe3[0]);  // Cerrar el extremo de lectura del pipe3
+        close(pipe1[1]);  //cerrar el extremo de escritura del pipe1
+        close(pipe2[1]);  //cerrar el extremo de escritura del pipe2
+        close(pipe3[0]);  //cerrar el extremo de lectura del pipe3
 
         int sumaA, sumaB;
         read(pipe1[0], &sumaA, sizeof(sumaA));  //leer sumaA desde el pipe1
