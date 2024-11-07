@@ -27,7 +27,7 @@ sido creados.
 
 void *funcion_hilo(void *arg) {
     int id = *(int *)arg;
-    printf("Hilo %d iniciado\n", id);
+    printf("Hilo %d se ha iniciado\n", id);
 
     for (int i = 0; i <= CUENTA; i++) {
         if (i == 0 || i == CUENTA) {
@@ -43,7 +43,6 @@ int main() {
     pthread_t hilos[NUM_HILOS];
     int ids[NUM_HILOS];
 
-    // Creación de hilos en orden
     for (int i = 0; i < NUM_HILOS; i++) {
         ids[i] = i + 1;
         if (pthread_create(&hilos[i], NULL, funcion_hilo, &ids[i]) != 0) {
